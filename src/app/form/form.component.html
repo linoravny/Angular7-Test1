@@ -1,0 +1,37 @@
+<div class='panel panel-primary'>
+  <div class='panel-heading' >
+    {{pageTite}}
+  </div>
+  <div class='panel-body'>
+      <form [formGroup]="myForm" (submit)="handleLogin()">
+          <input type="email" formControlName="email"  />
+          <div>
+            Value: {{ myForm.controls.email.value }}
+          </div>
+
+          <div *ngIf="myForm.get('email').hasError('required') && 
+                    (myForm.controls.email.dirty || myForm.controls.email.touched)"
+            class="alert alert-danger"> 
+              email is required
+         </div> 
+          
+          <br/>
+
+          <input type="password" formControlName="passwordLA" minlength="5" />
+          <!--validation-->
+          <div *ngIf="password.errors && 
+                    (password.dirty || password.touched)"
+            class="alert alert-danger"> 
+            <div *ngIf="password.errors.required">
+              Password is required
+            </div>
+            <div *ngIf="password.errors.pattern">
+              Password has pattern error
+            </div>
+              
+         </div> 
+          <br/>
+
+          <button type="submit">submit</button>
+      </form>
+</div>
