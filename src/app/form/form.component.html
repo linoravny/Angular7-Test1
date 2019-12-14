@@ -17,7 +17,7 @@
           
           <br/>
 
-          <input type="password" formControlName="passwordLA" minlength="5" />
+          <input type="password" formControlName="password"/>
           <!--validation-->
           <div *ngIf="password.errors && 
                     (password.dirty || password.touched)"
@@ -28,7 +28,9 @@
             <div *ngIf="password.errors.pattern">
               Password has pattern error
             </div>
-              
+            <div *ngIf="password.errors.passwordCustomErr">
+              xxx not available for password
+            </div>
          </div> 
           <br/>
 
