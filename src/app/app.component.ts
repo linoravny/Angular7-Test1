@@ -7,5 +7,5 @@ import { Component, ViewEncapsulation  } from '@angular/core';
   encapsulation: ViewEncapsulation.None 
 })
 export class AppComponent {
-  title = 'Angular 7 - Test 1';
+  pageTitle: string = 'Angular 7 - Test 1';
 }

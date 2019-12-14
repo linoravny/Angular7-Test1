@@ -2,17 +2,18 @@ import {Component, OnInit, DoCheck, OnDestroy} from '@angular/core';
 import { IProduct } from './IProduct';
 import { ProductService } from './product.service';
 import { Subscription } from 'rxjs';
+import { ProductFilterPipe } from './product-filter.pipe';
+
 
 @Component({
 selector:'pm-products',
 templateUrl:"./product-list.component.html",
-providers: [ProductService]
+providers: [ProductService,ProductFilterPipe]
 })
 export class ProductListComponent implements OnInit, DoCheck, OnDestroy
 {
-
     constructor(private productsSrv: ProductService){}
-
+    pipeFilter: string;
     ngDoCheck(): void {
         console.log("Method ngDoCheck implemented.");
     }
