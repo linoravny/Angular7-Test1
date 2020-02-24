@@ -1,10 +1,29 @@
-# Angular 7 - Test Proj 1
+# Angular
+# First installation
+Globally intalation
+* node js (getting npm) - https://nodejs.org/en/ - download LTS
+* $npm install -g @angular/cli@latest
+* $npm install -g npm-install-peers
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+------------------------------------------------------
+Package                      Version
+********                    *********
+@angular-devkit/architect    0.900.3
+@angular-devkit/core         9.0.3
+@angular-devkit/schematics   9.0.3
+@schematics/angular          9.0.3
+@schematics/update           0.900.3
+rxjs                         6.5.3
+------------------------------------------------------
+
+for adding more package: 
+npm i [package_name] --save-dev ( is used to save the package for development purpose )
+npm i [package_name] --save ( is used to save the package required for the application to run )
 
 ## Development server
 Run `npm install` for install node_modules by package.json
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` / `ng serve -o` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

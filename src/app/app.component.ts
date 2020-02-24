@@ -11,7 +11,7 @@ import { AuthService } from './services/auth.service';
 export class AppComponent {
   constructor(private authService: AuthService) { }
 
-  pageTitle: string = 'Angular 7 - Test 1';
+  pageTitle: string = 'My Angular Test App..';
 
   logout(){
     this.authService.logout();

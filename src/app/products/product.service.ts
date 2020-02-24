@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {IProduct} from './IProduct';
-import { injectAttribute } from '@angular/core/src/render3';
 import { Observable, throwError } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import {catchError, map} from 'rxjs/operators'
