@@ -3,7 +3,7 @@
     <div class="col-sm">{{pageTite}}</div>
   </div> -->
   
-  <form [formGroup]="myForm" (submit)="handleLogin()" name="loginForm">
+  <ng-form [formGroup]="myForm" (submit)="handleLogin()" name="loginForm">
 
     <!--email-->
     <div class="form-group">
@@ -50,4 +50,4 @@
       <button type="submit" class="btn btn-dark">submit</button>
     </div>
 
-  </form>
+  </ng-form>
