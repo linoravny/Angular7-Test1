@@ -9,12 +9,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ------------------------------------------------------
 Package                      Version
 ********                    *********
-@angular-devkit/architect    0.900.3
-@angular-devkit/core         9.0.3
-@angular-devkit/schematics   9.0.3
-@schematics/angular          9.0.3
-@schematics/update           0.900.3
-rxjs                         6.5.3
+* @angular-devkit/architect    0.900.3
+* @angular-devkit/core         9.0.3
+* @angular-devkit/schematics   9.0.3
+* @schematics/angular          9.0.3
+* @schematics/update           0.900.3
+* rxjs                         6.5.3
 ------------------------------------------------------
 
 for adding more package: 
