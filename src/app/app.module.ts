@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'; 
 
 import { AppComponent } from './app.component';
-import { ProductListComponent } from "./products/product-list.component";
+import { ProductListComponent } from './products/product-list.component';
 import { Routes, RouterModule } from '@angular/router';
 
-import { FormsModule } from "@angular/forms";
+import { FormsModule } from '@angular/forms';
 import { ProductFilterPipe } from './products/product-filter.pipe';
 import { StarComponent } from './shared/components/star/star.component';
 import { FormComponent } from './form/form.component';
@@ -24,11 +24,11 @@ const routes: Routes = [
   { path: 'product/:id', component: ProductDetailsComponent, canActivate: [AuthGuard],
     children:[
       { path: 'overview', component: ProductListComponent }
-    ] 
+    ]
   },
   { path: 'form', component: FormComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '**', redirectTo: 'home', pathMatch: 'full'} //pathMatch = full/prefix
+  { path: '**', redirectTo: 'home', pathMatch: 'full'}
 ];
 
 @NgModule({
@@ -52,5 +52,5 @@ const routes: Routes = [
   providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
 }
