@@ -4,3 +4,40 @@
     width: 100%;
     max-width: 400px;
 }
+
+.box {
+    /* Choose the animation */
+    animation-name: movingBox;
+  
+    /* The animation’s duration */
+    animation-duration: 2300ms;
+  
+    /* The number of times we want
+        the animation to run */
+    animation-iteration-count: 2;
+  
+    /* Causes the animation to reverse
+        on every odd iteration */
+    animation-direction: alternate;
+  }
+  
+  @keyframes movingBox {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0.4;
+    }
+  
+    25% {
+      opacity: 0.9;
+    }
+  
+    50% {
+      transform: translate(150px, 200px);
+      opacity: 0.2;
+    }
+  
+    100% {
+      transform: translate(40px, 30px);
+      opacity: 0.8;
+    }
+  }
