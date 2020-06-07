@@ -26,6 +26,7 @@
     "readable-stream": "^3.6.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.11.0",
+    "websocket-extensions": "^0.1.4",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
