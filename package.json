@@ -53,7 +53,7 @@
     "node-pre-gyp": "^0.14.0",
     "node-sass": "^4.14.1",
     "protractor": "~5.4.3",
-    "serialize-javascript": ">=3.0.0",
+    "serialize-javascript": ">=3.1.0",
     "ts-node": "~8.6.2",
     "tslint": "^5.20.1",
     "typescript": ">=3.6 < 3.8"
