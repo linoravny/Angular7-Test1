@@ -18,8 +18,11 @@ export class ProductListComponent implements OnInit, DoCheck, OnDestroy
         console.log("Method ngDoCheck implemented.");
     }
     ngOnInit(): void {
-        this.objsubscibe = this.productsSrv.getProducts1().subscribe(
-            data=>(this.products = data),
+        this.objsubscibe = this.productsSrv.getProducts().subscribe(
+            data=> {
+                this.products = data;
+                console.log("products: " + JSON.stringify(this.products));
+            },
             err=>console.log(err)
         );
     }

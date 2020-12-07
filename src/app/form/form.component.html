@@ -24,7 +24,7 @@
 
     <!--password-->
     <div class="form-group">
-      <label for="email">Email password</label>
+      <label for="email">Password</label>
       <input type="password" 
           formControlName="userPassword"
           class="form-control col-sm-6"
@@ -37,7 +37,7 @@
           Password is required
         </div>
         <div *ngIf="myForm.controls.userPassword.errors.pattern">
-          Password has pattern error
+          Password has pattern error - [a-z] required
         </div>
         <div *ngIf="myForm.controls.password.errors.passwordCustomErr">
           xxx not available for password

@@ -10,7 +10,7 @@ export class ProductService {
     _productURL:string = './assets/api/products.json';
     constructor(private http: HttpClient){}
 
-    getProducts1(): Observable<IProduct[]> {
+    getProducts(): Observable<IProduct[]> {
         return this.http.get<IProduct[]>(this._productURL).pipe(
             catchError(
                 (error:any)=>
@@ -23,7 +23,7 @@ export class ProductService {
     }
 
     getProductById(id:number): Observable<IProduct> {
-        return this.getProducts1().pipe(
+        return this.getProducts().pipe(
             map(result =>
               result.find(result => result.productId === id)
             )

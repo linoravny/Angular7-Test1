@@ -11,6 +11,9 @@
   },
   "private": true,
   "dependencies": {
+    "@fortawesome/angular-fontawesome": "^0.8.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "bootstrap": "^4.4.1",
     "core-js": "^3.6.4",
     "jquery": "^3.5.1",

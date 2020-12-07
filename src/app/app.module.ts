@@ -18,6 +18,8 @@ import { ProductDetailsComponent } from './products/product-details.component';
 import { AuthGuard } from './auth.guard';
 import { AuthService } from './services/auth.service';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductListComponent },
@@ -44,6 +46,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,

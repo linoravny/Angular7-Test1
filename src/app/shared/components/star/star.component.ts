@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges, Output, EventEmitter } from '@angular/core';
+import { faCoffee, faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'ai-star',
@@ -9,9 +10,10 @@ export class StarComponent implements OnChanges {
   @Input() rating:number;
   @Output() raitingClicked:EventEmitter<string> = new EventEmitter<string>();
   starWidth:number;
+  faStar = faStar;
 
   ngOnChanges(): void{ //listen to @input change
-    this.starWidth = (70/5)*this.rating;
+    this.starWidth = (18)*this.rating;
   }
 
   onClick(): void{

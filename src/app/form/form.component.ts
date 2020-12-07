@@ -11,12 +11,13 @@ import { custumPipe } from '../form/form.pipe';
   providers: [AuthService, custumPipe]
 })
 export class FormComponent implements OnInit {
- myForm: FormGroup;
+  
+  myForm: FormGroup;
   pageTite = 'Login';
+  
   constructor(private authService: AuthService, private router: Router) {
 
-    // , 
-   }
+  }
 
   ngOnInit() {
     this.myForm = new FormGroup({
