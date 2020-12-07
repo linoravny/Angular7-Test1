@@ -27,7 +27,7 @@ const routes: Routes = [
     ]
   },
   { path: 'form', component: FormComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  //{ path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home', pathMatch: 'full'}
 ];
 
