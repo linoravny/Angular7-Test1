@@ -2,12 +2,14 @@ import {Injectable} from '@angular/core';
 import {IProduct} from './IProduct';
 import { Observable, throwError } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import {catchError, map} from 'rxjs/operators'
+import {catchError, map, mergeMap, retry} from 'rxjs/operators'
 
 @Injectable()//while service call service
 
 export class ProductService {
+   
     _productURL:string = './assets/api/products.json';
+   
     constructor(private http: HttpClient){}
 
     getProducts(): Observable<IProduct[]> {

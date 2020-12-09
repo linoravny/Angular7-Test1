@@ -9,6 +9,7 @@
     <div class="form-group">
       <label for="email">Email address</label>
       <input type="email" 
+        required
         formControlName="email"
         class="form-control col-sm-6"
         placeholder="Enter email"
@@ -16,8 +17,9 @@
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else...</small>
       <div *ngIf="myForm.controls.email.value">Value: {{ myForm.controls.email.value }}</div>
       <!--validation-->
-      <div class='alert alert-danger' *ngIf="myForm.get('email').hasError('required') && 
-                (myForm.controls.email.dirty || myForm.controls.email.touched)" role="alert"> 
+      <div class='alert alert-danger' 
+      *ngIf="myForm.controls.email.errors.required && (myForm.controls.email.dirty || myForm.controls.email.touched)" 
+      role="alert"> 
         email is required
       </div> 
     </div>
@@ -25,7 +27,8 @@
     <!--password-->
     <div class="form-group">
       <label for="email">Password</label>
-      <input type="password" 
+      <input type="password"
+          required 
           formControlName="userPassword"
           class="form-control col-sm-6"
           placeholder="Enter password"/>
@@ -39,7 +42,7 @@
         <div *ngIf="myForm.controls.userPassword.errors.pattern">
           Password has pattern error - [a-z] required
         </div>
-        <div *ngIf="myForm.controls.password.errors.passwordCustomErr">
+        <div *ngIf="myForm.controls.userPassword.errors.passwordCustomErr">
           xxx not available for password
         </div>
       </div> 

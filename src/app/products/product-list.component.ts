@@ -13,7 +13,16 @@ providers: [ProductService,ProductFilterPipe]
 export class ProductListComponent implements OnInit, DoCheck, OnDestroy
 {
     constructor(private productsSrv: ProductService){}
+   
     pipeFilter: string;
+    pageTite:string = "Product List";
+    imgHight:number = 30;
+    imgWidth:number = 30;
+    showImg:boolean = true;
+    listFilter:string = "card";//for ngModel need to import module angular forms
+    products: IProduct[];
+    objsubscibe: Subscription;
+
     ngDoCheck(): void {
         console.log("Method ngDoCheck implemented.");
     }
@@ -23,6 +32,7 @@ export class ProductListComponent implements OnInit, DoCheck, OnDestroy
                 this.products = data;
                 console.log("products: " + JSON.stringify(this.products));
             },
+
             err=>console.log(err)
         );
     }
@@ -30,14 +40,6 @@ export class ProductListComponent implements OnInit, DoCheck, OnDestroy
     ngOnDestroy(){
         this.objsubscibe.unsubscribe();
     }
-
-    pageTite:string = "Product List";
-    imgHight:number = 30;
-    imgWidth:number = 30;
-    showImg:boolean = true;
-    listFilter:string = "card";//for ngModel need to import module angular forms
-    products: IProduct[];
-    objsubscibe: Subscription;
 
     toggleImage():void {
         this.showImg = !this.showImg; 
